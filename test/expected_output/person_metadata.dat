@@ -1,0 +1,13 @@
+1	802	NK	Nick Named Person A	1		nick named person a
+2	802	NK	Nick Named Person AB	2		nick named person ab
+3	802	DB	28 April 1966, Los Angeles, California, USA	1		28 april 1966, los angeles, california, usa
+4	802	HT	5' 7"	1		5' 7"
+5	802	TR	Well known as test person Person A	1		well known as test person person a
+6	201	RN	John Real Doe	1		john real doe
+7	201	HT	6' 4"	1		6' 4"
+8	201	TR	Began his career as a test person in the NMDB test part of the system used to building usable files.	1		began his career as a test person in the nmdb test part of the system used to building usable files.
+9	201	TR	His father was unknown.	2		his father was unknown.
+10	201	TR	Was born in a computer data file.	3		was born in a computer data file.
+11	201	QU	I don't exist, therefor I am.	1		i don't exist, therefor i am.
+12	810	NK	A New User	1		a new user
+13	804	BG	Biography for our Test User with no links to any other tested user. Especially not the user @@PID@201@@, and really not even @@PID@810@@, but that's another matter.	1	Anonymous	biography for our test user with no links to any other tested user. especially not the user other last (i), and really not even user new (ii), but that's another matter.

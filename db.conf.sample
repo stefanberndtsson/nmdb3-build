@@ -1,0 +1,19 @@
+--- 
+:cmd: psql
+:dump_cmd: pg_dump
+:restart_cmd: 
+- sudo
+- /etc/init.d/postgresql
+- restart
+:temp_name: nmdb_temp
+:name: nmdb
+:old_name: nmdb_old
+:template: template1
+:host: 
+:port: 
+:user: 
+:pass: 
+:local_tables: 
+- users
+- user_movie_data
+- user_settings

@@ -1,0 +1,16 @@
+--- 
+:type: :build
+:action: :upgrade
+:base: data
+:jruby: jruby-1.6.5.1 --server -J-Xmx3000m
+:input_source: ftp://ftp.sunet.se/pub/tv+movies/imdb
+:input: download
+:output: output
+:overlap: ../overlap
+:previous: previous_ids
+:sqlscript: ../sqlscripts
+:tmp: tmp
+:apache_restart: 
+- sudo
+- /etc/init.d/apache2
+- restart

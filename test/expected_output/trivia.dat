@@ -1,0 +1,3 @@
+1	1	false	The first trivia for the movie @@MID@1@@, with a few links and stuff like that. Long enough for a second line with a link to @@PID@201@@ too.	the first trivia for the movie test movie (2010), with a few links and stuff like that. long enough for a second line with a link to other last (i) too.
+2	1	true	This one has two trivias, where this is marked as a spoiler.	this one has two trivias, where this is marked as a spoiler.
+3	2	false	Here is one with a sublist. This isn't actually handled, but here for future reference - Point 1 - Point 2 - Point 3 - Point 4	here is one with a sublist. this isn't actually handled, but here for future reference - point 1 - point 2 - point 3 - point 4

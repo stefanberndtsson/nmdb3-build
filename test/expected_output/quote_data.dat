@@ -1,0 +1,8 @@
+1	1	[repeated line]	1	[repeated line]
+2	1	Main Character: Life sucks!	2	main character: life sucks!
+3	2	[watching movie]	1	[watching movie]
+4	2	John Dodo: This is a normal quote that appears to be long enough to actually spill over to the next line.	2	john dodo: this is a normal quote that appears to be long enough to actually spill over to the next line.
+5	3	[Here we have a comment that also is long enough to wrap lines, and make this bit show up on line two]	1	[here we have a comment that also is long enough to wrap lines, and make this bit show up on line two]
+6	3	Jane Doe: What?	2	jane doe: what?
+7	3	[not hearing]	3	[not hearing]
+8	3	John Doe: [turning around] What was that?	4	john doe: [turning around] what was that?

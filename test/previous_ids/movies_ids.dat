@@ -1,0 +1,13 @@
+1	Test Movie (2010)
+2	Test Movie 2 (2011)
+3	Test Movie 3 (2012) (TV)
+4	Test Video 4 (2013) (V)
+500	Test Game 5 (2014) (VG)
+6	"Test Series" (2001)
+7	"Test Series" (2001) {(#1.1)}
+8	"Test Series" (2001) { (#1.2)}
+9	"Test Series" (2001) {Episode 3}
+100	"Test Series" (2001) {(#1.4)}
+101	"Test Series" (2001) {Episode 5 Old Name (#1.5)}
+11	"Test åäö" (2002)
+12	"Test åäö" (2002) {Avsnitt åäöÅÄÖ}

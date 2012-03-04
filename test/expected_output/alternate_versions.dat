@@ -1,0 +1,9 @@
+1	1		true	The version first described is different from the other versions for no other reason than to fill this text.
+2	1		false	Sublist of differences:
+3	1	2	false	1. First difference.
+4	1	2	false	2. Second difference. These kinds of differences with a sublist are not actually handled, but for future reference, this will be included here anyway.
+5	1	2	false	3. Third difference.
+6	500		false	German version subtitled.
+7	500		true	Nothing happens in the end.
+8	500	7	true	Sub thing
+9	500	7	true	Sub thing again

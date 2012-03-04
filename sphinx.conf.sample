@@ -1,0 +1,339 @@
+#
+# Sphinx configuration file sample
+#
+# WARNING! While this sample file mentions all available options,
+# it contains (very) short helper descriptions only. Please refer to
+# doc/sphinx.html for details.
+#
+
+#############################################################################
+## data source definition
+#############################################################################
+
+source movies-simple-pg
+{
+	type = pgsql
+	sql_host = localhost
+	sql_user = sphinxuser
+	sql_pass = sphinxpass
+	sql_db = nmdb
+	sql_port = 5432
+
+	sql_query = \
+	SELECT * FROM sphinx_index_movies_simple
+	sql_attr_uint = category
+	sql_attr_uint = is_episode
+	sql_attr_uint = link_score
+	sql_attr_uint = occupation_score
+	sql_attr_float = rating
+	sql_attr_uint = votes
+}
+
+source movies-pg
+{
+	type = pgsql
+	sql_host = localhost
+	sql_user = sphinxuser
+	sql_pass = sphinxpass
+	sql_db = nmdb
+	sql_port = 5432
+
+	sql_query = \
+	SELECT * FROM sphinx_index_movies
+	sql_attr_uint = category
+	sql_attr_uint = is_episode
+	sql_attr_uint = link_score
+	sql_attr_uint = occupation_score
+	sql_attr_float = rating
+	sql_attr_uint = votes
+	sql_attr_multi = uint genre_ids from field
+	sql_attr_multi = uint keyword_ids from field
+	sql_attr_multi = uint language_ids from field
+	sql_attr_multi = uint year_attr from field
+	sql_attr_multi = uint decade_attr from field
+	sql_attr_multi = uint cast_ids from field
+	sql_attr_multi = uint producer_ids from field
+	sql_attr_multi = uint director_ids from field
+	sql_attr_multi = uint writer_ids from field
+}
+
+source people-simple-pg
+{
+	type = pgsql
+	sql_host = localhost
+	sql_user = sphinxuser
+	sql_pass = sphinxpass
+	sql_db = nmdb
+	sql_port = 5432
+
+	sql_query = \
+	SELECT * FROM sphinx_index_people_simple
+}
+
+source people-pg
+{
+	type = pgsql
+	sql_host = localhost
+	sql_user = sphinxuser
+	sql_pass = sphinxpass
+	sql_db = nmdb
+	sql_port = 5432
+
+	sql_query = \
+	SELECT * FROM sphinx_index_people
+	sql_attr_multi = uint episode_ids from field
+	sql_attr_multi = uint movie_ids from field
+}
+
+source plots-pg
+{
+	type = pgsql
+	sql_host = localhost
+	sql_user = sphinxuser
+	sql_pass = sphinxpass
+	sql_db = nmdb
+	sql_port = 5432
+
+	sql_query = \
+	SELECT * FROM sphinx_index_movies_plot
+	sql_attr_uint = category
+	sql_attr_uint = is_episode
+	sql_attr_uint = link_score
+	sql_attr_uint = occupation_score
+	sql_attr_float = rating
+	sql_attr_uint = votes
+	sql_attr_multi = uint genre_ids from field
+	sql_attr_multi = uint keyword_ids from field
+	sql_attr_multi = uint language_ids from field
+	sql_attr_multi = uint year_attr from field
+	sql_attr_multi = uint decade_attr from field
+	sql_attr_multi = uint cast_ids from field
+	sql_attr_multi = uint producer_ids from field
+	sql_attr_multi = uint director_ids from field
+	sql_attr_multi = uint writer_ids from field
+}
+
+source quotes-pg
+{
+	type = pgsql
+	sql_host = localhost
+	sql_user = sphinxuser
+	sql_pass = sphinxpass
+	sql_db = nmdb
+	sql_port = 5432
+
+	sql_query = \
+	SELECT * FROM sphinx_index_movies_quote
+	sql_attr_uint = category
+	sql_attr_uint = is_episode
+	sql_attr_uint = link_score
+	sql_attr_uint = occupation_score
+	sql_attr_float = rating
+	sql_attr_uint = votes
+	sql_attr_multi = uint genre_ids from field
+	sql_attr_multi = uint keyword_ids from field
+	sql_attr_multi = uint language_ids from field
+	sql_attr_multi = uint year_attr from field
+	sql_attr_multi = uint decade_attr from field
+	sql_attr_multi = uint cast_ids from field
+	sql_attr_multi = uint producer_ids from field
+	sql_attr_multi = uint director_ids from field
+	sql_attr_multi = uint writer_ids from field
+}
+
+source biography-pg
+{
+	type = pgsql
+	sql_host = localhost
+	sql_user = sphinxuser
+	sql_pass = sphinxpass
+	sql_db = nmdb
+	sql_port = 5432
+
+	sql_query = \
+	SELECT * FROM sphinx_index_people_biography
+	sql_attr_multi = uint episode_ids from field
+	sql_attr_multi = uint movie_ids from field
+}
+
+#############################################################################
+## index definition
+#############################################################################
+
+index movies-simple
+{
+	source = movies-simple-pg
+	path = /var/lib/sphinxsearch/data/pg-movies-simple
+	docinfo = extern
+	mlock = 0
+	morphology = none
+	min_word_len = 1
+	charset_type = utf-8
+	charset_table = 0..9, A..Z->a..z, _, U+002D, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+	ignore_chars = U+0027
+	html_strip = 0
+}
+
+index movies
+{
+	source = movies-pg
+	path = /var/lib/sphinxsearch/data/pg-movies
+	docinfo = extern
+	mlock = 0
+	morphology = none
+	min_word_len = 1
+	charset_type = utf-8
+	charset_table = 0..9, A..Z->a..z, _, U+002D, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+	ignore_chars = U+0027
+	html_strip = 0
+}
+
+index people-simple
+{
+	source = people-simple-pg
+	path = /var/lib/sphinxsearch/data/pg-people-simple
+	docinfo = extern
+	mlock = 0
+	morphology = none
+	min_word_len = 1
+	charset_type = utf-8
+	charset_table = 0..9, A..Z->a..z, _, U+002D, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+	ignore_chars = U+0027
+	html_strip = 0
+}
+
+index people
+{
+	source = people-pg
+	path = /var/lib/sphinxsearch/data/pg-people
+	docinfo = extern
+	mlock = 0
+	morphology = none
+	min_word_len = 1
+	charset_type = utf-8
+	charset_table = 0..9, A..Z->a..z, _, U+002D, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+	ignore_chars = U+0027
+	html_strip = 0
+}
+
+index plots
+{
+	source = plots-pg
+	path = /var/lib/sphinxsearch/data/pg-plots
+	docinfo = extern
+	mlock = 0
+	morphology = none
+	min_word_len = 1
+	charset_type = utf-8
+	charset_table = 0..9, A..Z->a..z, _, U+002D, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+	ignore_chars = U+0027
+	html_strip = 0
+}
+
+index quotes
+{
+	source = quotes-pg
+	path = /var/lib/sphinxsearch/data/pg-quotes
+	docinfo = extern
+	mlock = 0
+	morphology = none
+	min_word_len = 1
+	charset_type = utf-8
+	charset_table = 0..9, A..Z->a..z, _, U+002D, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+	ignore_chars = U+0027
+	html_strip = 0
+}
+
+index biography
+{
+	source = biography-pg
+	path = /var/lib/sphinxsearch/data/pg-biography
+	docinfo = extern
+	mlock = 0
+	morphology = none
+	min_word_len = 1
+	charset_type = utf-8
+	charset_table = 0..9, A..Z->a..z, _, U+002D, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+	ignore_chars = U+0027
+	html_strip = 0
+}
+
+#############################################################################
+## indexer settings
+#############################################################################
+
+indexer
+{
+	# memory limit, in bytes, kiloytes (16384K) or megabytes (256M)
+	# optional, default is 32M, max is 2047M, recommended is 256M to 1024M
+	mem_limit			= 256M
+
+	# maximum IO calls per second (for I/O throttling)
+	# optional, default is 0 (unlimited)
+	#
+	# max_iops			= 40
+
+
+	# maximum IO call size, bytes (for I/O throttling)
+	# optional, default is 0 (unlimited)
+	#
+	# max_iosize		= 1048576
+}
+
+#############################################################################
+## searchd settings
+#############################################################################
+
+searchd
+{
+	# IP address to bind on
+	# optional, default is 0.0.0.0 (ie. listen on all interfaces)
+	#
+	# address				= 127.0.0.1
+	# address				= 192.168.0.1
+#	listen = 127.0.0.1
+
+
+	# searchd TCP port number
+	# mandatory, default is 3312
+	port				= 9312
+
+	# log file, searchd run info is logged here
+	# optional, default is 'searchd.log'
+	log					= /var/log/sphinxsearch/searchd.log
+
+	# query log file, all search queries are logged here
+	# optional, default is empty (do not log queries)
+	query_log			= /var/log/sphinxsearch/query.log
+
+	# client read timeout, seconds
+	# optional, default is 5
+	read_timeout		= 5
+
+	# maximum amount of children to fork (concurrent searches to run)
+	# optional, default is 0 (unlimited)
+	max_children		= 30
+
+	# PID file, searchd process ID file name
+	# mandatory
+	pid_file			= /var/run/sphinxsearch/searchd.pid
+
+	# max amount of matches the daemon ever keeps in RAM, per-index
+	# WARNING, THERE'S ALSO PER-QUERY LIMIT, SEE SetLimits() API CALL
+	# default is 1000 (just like Google)
+	max_matches			= 100000
+
+	# seamless rotate, prevents rotate stalls if precaching huge datasets
+	# optional, default is 1
+	seamless_rotate		= 1
+
+	# whether to forcibly preopen all indexes on startup
+	# optional, default is 0 (do not preopen)
+	preopen_indexes		= 0
+
+	# whether to unlink .old index copies on succesful rotation.
+	# optional, default is 1 (do unlink)
+	unlink_old			= 1
+}
+
+# --eof--

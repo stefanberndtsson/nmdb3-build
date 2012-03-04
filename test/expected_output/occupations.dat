@@ -1,0 +1,20 @@
+1	802	1	1				2	1	false	
+2	802	2	1			(voice)	2	1	false	
+3	802	3	1	Himself			1	1	false	himself
+4	201	1	1	Doe	1		4	1	false	doe
+5	201	2	1	Dodo		(as Another Last)	4	1	false	dodo
+6	201	3	1	Dodo Doe	3	(voice)	4	1	false	dodo doe
+7	803	500	1	Player		(voice)	4	1	false	player
+8	804	1	1	Tester	2		4	1	false	tester
+9	805	1	2				2	1	false	
+10	805	2	2			(archive footage)	0	1	false	
+11	805	3	2	Jane		(archive footage)	2	1	false	jane
+12	806	1	2	Doe	4		4	1	false	doe
+13	806	2	2	Dodo		(as Another Lastess)	4	1	false	dodo
+14	806	3	2	Herself	2	(uncredited)	0	1	false	herself
+15	807	500	2	Herself		(voice)	1	1	false	herself
+16	800	1	2	Tester	3		4	1	false	tester
+17	808	1	11			(novel)	0	1	false	
+18	808	2	11		1,2,3	(book)	0	1	false	
+19	802	3	11			(book)	0	1	false	
+20	809	3	11				0	1	false	

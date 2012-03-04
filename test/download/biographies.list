@@ -1,0 +1,43 @@
+BIOGRAPHY LIST
+==============
+
+-------------------------------------------------------------------------------
+NM: Last, First
+
+NK: Nick Named Person A
+NK: Nick Named Person AB
+
+DB: 28 April 1966, Los Angeles, California, USA
+
+HT: 5' 7"
+
+TR: * Well known as test person Person A
+
+-------------------------------------------------------------------------------
+NM: Last, Other (I)
+
+RN: John Real Doe
+
+HT: 6' 4"
+
+TR: * Began his career as a test person in the NMDB test part of the system
+TR:   used to building usable files.
+TR: * His father was unknown.
+TR: * Was born in a computer data file.
+
+QU: * I don't exist, therefor I am.
+
+-------------------------------------------------------------------------------
+NM: New, User (II)
+
+NK: A New User
+
+-------------------------------------------------------------------------------
+NM: User, Test,
+
+BG: Biography for our Test User with no links to any other tested user.
+BG: Especially not the user 'Other Last (I)' (qv), and really not even
+BG: 'User New (II)' (qv), but that's another matter.
+
+BY: Anonymous
+

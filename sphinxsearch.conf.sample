@@ -1,0 +1,13 @@
+--- 
+:sphinx_stop: 
+- sudo
+- /etc/init.d/sphinxsearch
+- stop
+:sphinx_start:
+- sudo
+- /etc/init.d/sphinxsearch
+- start
+:sphinx_index:
+- sudo
+- indexer
+- --all

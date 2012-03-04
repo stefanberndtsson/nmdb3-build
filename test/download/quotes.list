@@ -1,0 +1,21 @@
+QUOTES LIST
+=============
+# Test Movie (2010)
+[repeated line]
+Main Character: Life sucks!
+
+[watching movie]
+John Dodo: This is a normal quote that appears to be long enough to actually
+  spill over to the next line.
+
+# Non Existant (2000)
+Jane Doe: This one does not exist.
+
+# Test Movie 2 (2011)
+[Here we have a comment that also is long enough to wrap lines, and make this
+  bit show up on line two]
+Jane Doe: What?
+[not hearing]
+John Doe: [turning around] What was that?
+
+------------------------------------------------------------------------

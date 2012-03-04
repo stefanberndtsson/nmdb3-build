@@ -1,0 +1,13 @@
+LANGUAGE LIST
+=============
+Test Movie (2010)			English
+Test Movie (2010)			Swedish
+Test Movie (2010)			German
+Non Existant (2000)			German
+Test Movie (2010)			
+Test Game 5 (2014) (VG)			English	(Menus and subtitles)
+"Test Series" (2001)			English	(First episode only)
+"Test Series" (2001)			French
+"Test Series" (2001) {(#1.1?)}		English (No tab)
+"Test Series" (2001) {Episode 4 (#1.4)}	French
+-----------------------------------------------------------

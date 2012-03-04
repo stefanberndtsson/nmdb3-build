@@ -1,0 +1,32 @@
+PLOT SUMMARIES LIST
+===================
+
+MV: Test Movie (2010)
+
+PL: This is the fictional plot for the movie often referred to as _Test Movie (2010)_ (qv) with the
+PL: main characters 'Other Last (I)' (qv) and 'First Last' (qv) working together.
+
+BY: Anonymous
+
+-------------------------------------------------------------------------------------------
+MV: Non Existant (2000)
+
+PL: This is a non existant movie, and should not show up in the output.
+
+BY: Anonymous
+
+-------------------------------------------------------------------------------------------
+MV: Test Game 5 (2014) (VG)
+
+PL: This is a game. No point in testing the same stuff here as above. We'll test a C:\BASIC.COM instead.
+
+BY: user@host.com
+
+PL: This is a plot without an author. I don't know if this is legal, but I will
+PL: test for it anyway.
+
+PL: This is however a third plot for the same item. This should be tested.
+
+BY: Another User
+
+-------------------------------------------------------------------------------------------

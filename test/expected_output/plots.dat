@@ -1,0 +1,4 @@
+1	1	This is the fictional plot for the movie often referred to as @@MID@1@@ with the main characters @@PID@201@@ and @@PID@802@@ working together.	Anonymous	this is the fictional plot for the movie often referred to as test movie (2010) with the main characters other last (i) and first last working together.
+2	500	This is a game. No point in testing the same stuff here as above. We'll test a C:\\BASIC.COM instead.	user@host.com	this is a game. no point in testing the same stuff here as above. we'll test a c:\\basic.com instead.
+3	500	This is a plot without an author. I don't know if this is legal, but I will test for it anyway.		this is a plot without an author. i don't know if this is legal, but i will test for it anyway.
+4	500	This is however a third plot for the same item. This should be tested.	Another User	this is however a third plot for the same item. this should be tested.

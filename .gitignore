@@ -1,0 +1,11 @@
+overlap/data
+data
+test/output
+test/tmp
+*~
+\#*#
+.#*
+build.conf
+db.conf
+sphinx.conf
+sphinxsearch.conf

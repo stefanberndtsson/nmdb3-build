@@ -1,0 +1,7 @@
+1	1	Music by @@PID@201@@	1
+2	1	Lyrics by No User	2
+3	1	Performed by @@PID@802@@	3
+4	2	Music by @@PID@201@@ and @@PID@802@@	1
+5	2	Written by @@PID@802@@	2
+6	3	Music by @@PID@802@@	1
+7	3	Written by @@PID@802@@	2

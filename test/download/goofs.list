@@ -1,0 +1,20 @@
+GOOFS LIST
+==========
+
+# Test Movie (2010)
+- CONT: Goof with link to 'Other Last (I)' (qv) and _Test Movie (2010)_ (qv), long enough to
+  be broken into two lines.
+
+- FACT: This is a fact. That is a fact.
+
+- CHAR: SPOILER: This is not a fact. It is however a spoiler.
+
+
+# Non Existant (2000)
+- MISC: This should not be parsed.
+
+
+# Test Movie 2 (2011)
+- MISC: This should be parsed.
+
+

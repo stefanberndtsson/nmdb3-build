@@ -1,0 +1,14 @@
+1	Test Movie (2010)		Test Movie	2010	false	2010		false					test movie	
+2	Test Movie 2 (2011)		Test Movie 2	????	false	2011		false					test movie 2	
+3	Test Movie 3 (2012) (TV)		Test Movie 3	2012	false	2012	TV	false					test movie 3	
+4	Test Video 4 (2013) (V)		Test Video 4	2013	false	2013	V	false					test video 4	
+6	"Test Series" (2001)		"Test Series"	2001	false	2001	TVS	false					"test series"	
+7	"Test Series" (2001) {(#1.1?)}	"Test Series" (2001)	"Test Series"	2001	false	2001	TVS	true		1	1		"test series"	
+8	"Test Series" (2001) { (#1.2)}	"Test Series" (2001)	"Test Series"	2001	false	2001	TVS	true		1	2		"test series"	
+9	"Test Series" (2001) {Episode 3}	"Test Series" (2001)	"Test Series"	2001	false	2001	TVS	true	Episode 3				"test series"	episode 3
+11	"Test åäö" (2002)		"Test åäö"	2002-2005	false	2002	TVS	false					"test aao"	
+12	"Test åäö" (2002) {Avsnitt åäöÅÄÖ}	"Test åäö" (2002)	"Test åäö"	2002	false	2002	TVS	true	Avsnitt åäöÅÄÖ				"test aao"	avsnitt aaoaao
+100	"Test Series" (2001) {Episode 4 (#1.4)}	"Test Series" (2001)	"Test Series"	2001	false	2001	TVS	true	Episode 4	1	4		"test series"	episode 4
+101	"Test Series" (2001) {Episode 5 Old Name (#1.5)}	"Test Series" (2001)	"Test Series"	2001	false	2001	TVS	true	Episode 5 Old Name	1	5		"test series"	episode 5 old name
+500	Test Game 5 (2014) (VG)		Test Game 5	2014	false	2014	VG	false					test game 5	
+501	"Test Series" (2001) {Episode 5 New Name (#1.5)}	"Test Series" (2001)	"Test Series"	2001	false	2001	TVS	true	Episode 5 New Name	1	5		"test series"	episode 5 new name
