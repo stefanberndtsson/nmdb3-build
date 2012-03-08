@@ -43,7 +43,7 @@ How does it work?
 * Decompress each file using zlib
 * Convert files to UTF-8 using iconv
 * Restart PostgreSQL (this is done to reduce the memory footprint of PostgreSQL while building)
-* If upgrading, dump old movies and people id's from the previously created database, otherwise create empty files
+* If upgrading, dump old movies, imdb_ids and people id's from the previously created database, otherwise create empty files
 * (fork) Convert each file in turn to a series of tab separated files
 * Create a temporary database
 * Load basic schema
@@ -53,6 +53,7 @@ How does it work?
 * Build some indexes
 * Fill TV-Series main item with cast/character data from episodes
 * Build more indexes
+* Reload imdb_ids from dumped file
 * Create tables with summaries for keywords, genres and languages (used for similarity comparisons)
 * Run a long job through jruby building a massive comparison table (uses around 13GB with index on disk)
 * Load the massive table
