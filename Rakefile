@@ -745,7 +745,17 @@ namespace "db" do |ns|
     pg_run_script(:temp_name, sqlscript("dbindex.sql"))
   end
 
-  task :setup_similarity => :load_data do
+  task :reload_imdb_ids => :load_data do
+    pg_execute_cmd(:temp_name, "CREATE TABLE temp_imdb_id (id INT PRIMARY KEY, imdb_id TEXT);")
+    pg_execute_cmd(:temp_name, "ALTER TABLE movies ADD COLUMN imdb_id TEXT");
+    datafile = File.absolute_path(previous("imdb_ids.dat"))
+    if File.exists?(datafile)
+      pg_load_data(:temp_name, "temp_imdb_id", datafile)
+      pg_execute_cmd(:temp_name, "UPDATE movies SET imdb_id = temp_imdb_id.imdb_id FROM temp_imdb_id WHERE movies.id = temp_imdb_id.id");
+    end
+  end
+
+  task :setup_similarity => :reload_imdb_ids do
     # Create comparison tables for keywords, genres and languages
     # Dump them and plot data to files
     # Run overlap calculation on files
