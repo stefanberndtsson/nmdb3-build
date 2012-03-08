@@ -179,6 +179,7 @@ task :install do
   # Create empty files for previous ids
   File.open(previous("movies_ids.dat"), "w") {|file| file.write("") }
   File.open(previous("people_ids.dat"), "w") {|file| file.write("") }
+  File.open(previous("imdb_ids.dat"), "w") {|file| file.write("") }
   $debug = false
   $test = false
   Rake::Task[:default].invoke
