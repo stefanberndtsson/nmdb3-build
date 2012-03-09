@@ -754,6 +754,7 @@ namespace "db" do |ns|
       pg_load_data(:temp_name, "temp_imdb_id", datafile)
       pg_execute_cmd(:temp_name, "UPDATE movies SET imdb_id = temp_imdb_id.imdb_id FROM temp_imdb_id WHERE movies.id = temp_imdb_id.id");
     end
+    pg_execute_cmd(:temp_name, "CREATE INDEX movies_idx_imdb_id ON movies (imdb_id);")
   end
 
   task :setup_similarity => :reload_imdb_ids do
