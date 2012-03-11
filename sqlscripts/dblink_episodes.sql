@@ -6,14 +6,10 @@ UPDATE movies SET parent_id = t.parent_id
         INNER JOIN movies e ON e.episode_parent_title = m.full_title) t
        WHERE id = t.episode_id;
 
-CREATE OR REPLACE FUNCTION first_release_stamp(movie_id INT)
-RETURNS INT8
-AS
-$$
-SELECT EXTRACT(epoch FROM MIN(release_stamp))::INT8 FROM release_dates WHERE movie_id = $1
-$$
-LANGUAGE SQL;
-
-UPDATE movies SET movie_sort_value = first_release_stamp(id);
+UPDATE movies m SET movie_sort_value = rd.stamp
+       FROM (SELECT movie_id,EXTRACT(epoch FROM MIN(release_stamp)) AS stamp
+                    FROM release_dates
+                    GROUP BY movie_id) rd
+       WHERE m.id = rd.movie_id;
 
 CREATE INDEX movies_idx_parent_id ON movies (parent_id);
